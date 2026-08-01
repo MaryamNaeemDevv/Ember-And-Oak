@@ -1,4 +1,4 @@
-# sofa-scroll
+# Ember & Oak
 
 Scroll-driven exploded-view homepage — frame-sequence canvas scrubbing
 synced to scroll position via GSAP ScrollTrigger.
