@@ -1,0 +1,172 @@
+{
+  "node": {
+    "3fb0d7486a1ddf9523a695ad505ff4bd7ef829a3": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/cart/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/contact/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/shop/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/orders/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/shop/[slug]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/checkout/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/orders/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser",
+        "app/cart/page": "action-browser",
+        "app/contact/page": "action-browser",
+        "app/shop/page": "action-browser",
+        "app/about/page": "action-browser",
+        "app/orders/page": "action-browser",
+        "app/shop/[slug]/page": "action-browser",
+        "app/checkout/page": "action-browser",
+        "app/orders/[id]/page": "action-browser"
+      }
+    },
+    "7f73327d4b7ff9a80524536435c750948983e64e": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/cart/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/contact/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/shop/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/orders/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/shop/[slug]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/checkout/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/orders/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser",
+        "app/cart/page": "action-browser",
+        "app/contact/page": "action-browser",
+        "app/shop/page": "action-browser",
+        "app/about/page": "action-browser",
+        "app/orders/page": "action-browser",
+        "app/shop/[slug]/page": "action-browser",
+        "app/checkout/page": "action-browser",
+        "app/orders/[id]/page": "action-browser"
+      }
+    },
+    "f63dfd4de833c7d33a2bb45cb97bdbcabc1a1ecb": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/cart/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/contact/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/shop/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/orders/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/shop/[slug]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/checkout/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!",
+        "app/orders/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cauth%5C%5Cactions.ts%22%2C%5B%22register%22%2C%22logout%22%2C%22login%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser",
+        "app/cart/page": "action-browser",
+        "app/contact/page": "action-browser",
+        "app/shop/page": "action-browser",
+        "app/about/page": "action-browser",
+        "app/orders/page": "action-browser",
+        "app/shop/[slug]/page": "action-browser",
+        "app/checkout/page": "action-browser",
+        "app/orders/[id]/page": "action-browser"
+      }
+    },
+    "0ab2e841d292303e4cabeb8c503ce070c1ee3f03": {
+      "workers": {
+        "app/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccart%5C%5Cactions.ts%22%2C%5B%22updateCartItem%22%2C%22addToCart%22%2C%22removeFromCart%22%5D%5D%5D&__client_imported__=!",
+        "app/shop/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccart%5C%5Cactions.ts%22%2C%5B%22updateCartItem%22%2C%22addToCart%22%2C%22removeFromCart%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/cart/page": "rsc",
+        "app/shop/[slug]/page": "rsc"
+      }
+    },
+    "6f4211bf016362966c0b79acbf1df64f9e706789": {
+      "workers": {
+        "app/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccart%5C%5Cactions.ts%22%2C%5B%22updateCartItem%22%2C%22addToCart%22%2C%22removeFromCart%22%5D%5D%5D&__client_imported__=!",
+        "app/shop/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccart%5C%5Cactions.ts%22%2C%5B%22updateCartItem%22%2C%22addToCart%22%2C%22removeFromCart%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/cart/page": "rsc",
+        "app/shop/[slug]/page": "rsc"
+      }
+    },
+    "c0cb4cca205495447f8b32367e1be86f0103e162": {
+      "workers": {
+        "app/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccart%5C%5Cactions.ts%22%2C%5B%22updateCartItem%22%2C%22addToCart%22%2C%22removeFromCart%22%5D%5D%5D&__client_imported__=!",
+        "app/shop/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccart%5C%5Cactions.ts%22%2C%5B%22updateCartItem%22%2C%22addToCart%22%2C%22removeFromCart%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/cart/page": "rsc",
+        "app/shop/[slug]/page": "rsc"
+      }
+    },
+    "007370dc1cc67563f30bcd3576cbd55c6cb3345a": {
+      "workers": {
+        "app/admin/products/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cadmin%5C%5Cproducts%5C%5Cactions.ts%22%2C%5B%22updateProduct%22%2C%22createProduct%22%2C%22deleteProduct%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/admin/products/page": "rsc"
+      }
+    },
+    "2ab0cc2cf2124ef0c9afebb5cefc4dd5273f028b": {
+      "workers": {
+        "app/admin/products/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cadmin%5C%5Cproducts%5C%5Cactions.ts%22%2C%5B%22updateProduct%22%2C%22createProduct%22%2C%22deleteProduct%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/admin/products/page": "rsc"
+      }
+    },
+    "c9098a661cbc6dc22a89e1033dc8f63074b4c754": {
+      "workers": {
+        "app/admin/products/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cadmin%5C%5Cproducts%5C%5Cactions.ts%22%2C%5B%22updateProduct%22%2C%22createProduct%22%2C%22deleteProduct%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/admin/products/page": "rsc"
+      }
+    },
+    "09eb17171b63a06b3883b8f12f208ac7d26ef812": {
+      "workers": {
+        "app/admin/categories/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cadmin%5C%5Ccategories%5C%5Cactions.ts%22%2C%5B%22createCategory%22%2C%22deleteCategory%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/admin/categories/page": "rsc"
+      }
+    },
+    "ba009dc43ebef4fd8776e5bec8e0f0d3442f4c7c": {
+      "workers": {
+        "app/admin/categories/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cadmin%5C%5Ccategories%5C%5Cactions.ts%22%2C%5B%22createCategory%22%2C%22deleteCategory%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/admin/categories/page": "rsc"
+      }
+    },
+    "7d7ce257b510b0286ba5cc454bbb49fd368f3b93": {
+      "workers": {
+        "app/admin/orders/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Cadmin%5C%5Corders%5C%5Cactions.ts%22%2C%5B%22updateOrderStatus%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/admin/orders/page": "rsc"
+      }
+    },
+    "a3ffd3512baec40b202645e15168f9f5f660235f": {
+      "workers": {
+        "app/contact/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccontact%5C%5Cactions.ts%22%2C%5B%22submitContactMessage%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/contact/page": "rsc"
+      }
+    },
+    "bd6f30c570541cc35d511f77c16041f50b57dfab": {
+      "workers": {
+        "app/checkout/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5CFurniture%20Store%5C%5Capp%5C%5Ccheckout%5C%5Cactions.ts%22%2C%5B%22placeOrder%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/checkout/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "rQCKKU4PVkrtC54Z6Akntg4p8OuTPfweHxZAnRBsLmA="
+}

@@ -1,0 +1,1315 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/* Fonts: a condensed industrial grotesk for display (tension against a soft
+   product), a plain grotesk for body/UI, and a monospace for the teardown
+   part labels — tying the type system to the exploded-view content itself. */
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+
+:root {
+  --champagne: #f3ead9;
+  --linen: #faf5ec;
+  --espresso: #2c2018;
+  --rust: #b5501f;
+  --warm-grey: #8c8272;
+  --ink: #211812;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--champagne);
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Sekuya", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  margin: 0;
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  /* Explicit color instead of mix-blend-mode: difference — that gave an
+     unpredictable inverted tone depending on what was behind it. The
+     hero's own backdrop stays a consistent light warm tone throughout the
+     scroll, so a fixed espresso-brown reads clearly the whole way through. */
+  color: var(--espresso);
+  transition: opacity 0.35s ease;
+}
+
+.nav[data-faded="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav__mark-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__mark {
+  font-family: "Sekuya", sans-serif;
+  font-weight: 800;
+  font-size: 55px;
+  letter-spacing: 0.02em;
+  color: var(--espresso);
+}
+
+.nav__tagline {
+  font-family: "Sekuya", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--linen);
+}
+
+.nav__links {
+  display: flex;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.nav__links a {
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background 0.1s ease, color 0.15s ease;
+}
+
+.nav__links a:hover {
+  background: rgba(44, 32, 24, 0.08);
+  color: var(--rust);
+}
+
+.nav__cart {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  background: var(--espresso);
+  border: 1px solid var(--espresso);
+  color: var(--linen);
+  border-radius: 25px;
+  padding: 9px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.15s ease;
+}
+
+.nav__cart:hover {
+  opacity: 0.85;
+}
+
+.nav__account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav__account-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(44, 32, 24, 0.2);
+  border-radius: 999px;
+  padding: 6px 8px 6px 14px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
+
+.nav__account-pill a {
+  color: var(--espresso);
+  text-decoration: none;
+}
+
+.nav__account-pill a:hover {
+  color: var(--rust);
+}
+
+.nav__account-divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(44, 32, 24, 0.2);
+}
+
+.nav__account-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rust);
+  display: inline-block;
+  cursor: default;
+}
+
+.nav__account-logout {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: var(--espresso);
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__account-logout:hover {
+  color: var(--rust);
+}
+
+/* ---------- Category carousel (landing) ---------- */
+.category-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* Same background treatment as the frame-sequence hero below it, so the
+     handoff between the two feels like one continuous background rather
+     than two different sections. */
+  background: radial-gradient(ellipse at center, #cebda3 0%, #8c6f4d 100%);
+}
+
+.category-carousel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.category-carousel__slide[data-active="true"] {
+  opacity: 1;
+}
+
+.category-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-carousel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(44, 32, 24, 0.35) 0%,
+    rgba(44, 32, 24, 0.15) 40%,
+    rgba(44, 32, 24, 0.55) 100%
+  );
+}
+
+.category-carousel__content {
+  position: absolute;
+  left: 8vw;
+  bottom: 18vh;
+  z-index: 2;
+  color: var(--linen);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+}
+
+.category-carousel__content .panel__eyebrow {
+  color: #e8c9a8;
+}
+
+.category-carousel__content h2 {
+  color: var(--linen);
+  font-size: clamp(36px, 6vw, 64px);
+}
+
+.category-carousel__dots {
+  position: absolute;
+  right: 8vw;
+  bottom: 18vh;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+
+.category-carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--linen);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.category-carousel__dot[data-active="true"] {
+  background: var(--linen);
+}
+
+.category-carousel__scroll-hint {
+  position: absolute;
+  left: 8vw;
+  bottom: 40px;
+  z-index: 2;
+  color: var(--linen);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  opacity: 0.85;
+}
+
+.category-carousel__scroll-line {
+  width: 1px;
+  height: 32px;
+  background: var(--linen);
+  animation: scroll-hint-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.3); }
+}
+
+@media (max-width: 640px) {
+  .category-carousel__content,
+  .category-carousel__dots {
+    bottom: 22vh;
+  }
+  .category-carousel__dots {
+    right: auto;
+    left: 8vw;
+    bottom: 14vh;
+  }
+}
+
+/* ---------- Frame sequence hero ---------- */
+.frame-sequence {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* Matches the actual gradient baked into the video's studio backdrop
+     (sampled from the frames: warm tan center, darker warm-brown edges) —
+     a flat --champagne fill here visibly clashed with it. */
+  background: radial-gradient(ellipse at center, #cebda3 0%, #8c6f4d 100%);
+}
+
+.frame-sequence::after {
+  /* Fades the bottom edge of the hero into the page's --champagne, so the
+     handoff into the first content panel isn't an abrupt color seam. */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 18vh;
+  background: linear-gradient(to bottom, transparent, var(--champagne));
+  pointer-events: none;
+}
+
+.frame-sequence__canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.frame-sequence__loader {
+  position: absolute;
+  bottom: 40px;
+  left: 32px;
+  right: 32px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--espresso);
+}
+
+.frame-sequence__loader-label {
+  letter-spacing: 0.1em;
+}
+
+.frame-sequence__loader-track {
+  margin-top: 8px;
+  height: 2px;
+  background: rgba(44, 32, 24, 0.15);
+}
+
+.frame-sequence__loader-fill {
+  height: 100%;
+  background: var(--rust);
+  transition: width 0.15s linear;
+  
+}
+
+/* ---------- Teardown-style callouts ---------- */
+.frame-sequence__labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.callout {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--linen);
+}
+
+.callout[data-active="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.callout__index {
+  font-size: 16px;
+  color: var(--linen);
+  font-weight: 500;
+}
+
+.callout__leader {
+  width: 44px;
+  height: 2px;
+  background: var(--linen);
+}
+
+.callout__text {
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.callout__text em {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--linen);
+  margin-top: 4px;
+}
+
+/* ---------- Content panels ---------- */
+.panel {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 8vw;
+  border-top: 1px solid rgba(44, 32, 24, 0.1);
+}
+
+.panel__eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--rust);
+}
+
+.panel h2 {
+  font-size: clamp(32px, 6vw, 64px);
+  max-width: 14ch;
+}
+
+.panel p {
+  max-width: 50ch;
+  color: var(--espresso);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.panel--buy {
+  background: var(--espresso);
+  color: var(--linen);
+}
+
+.panel--buy .panel p {
+  color: var(--linen);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--espresso);
+  color: var(--linen);
+  padding: 72px 8vw 0;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  gap: 40px;
+  padding-bottom: 56px;
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-footer__brand .nav__mark {
+  color: var(--linen);
+}
+
+.site-footer__brand p {
+  color: var(--warm-grey);
+  font-size: 14px;
+  max-width: 26ch;
+}
+
+.site-footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-footer__heading {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--rust);
+  margin-bottom: 4px;
+}
+
+.site-footer__column a {
+  color: var(--linen);
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.site-footer__column a:hover {
+  opacity: 1;
+  color: var(--rust);
+}
+
+.site-footer__note {
+  color: var(--warm-grey);
+  font-size: 13px;
+  max-width: 24ch;
+  margin: 0;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(250, 245, 236, 0.12);
+  padding: 20px 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--warm-grey);
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+  }
+  .site-footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 14px 28px;
+  background: var(--rust);
+  border-radius: 25px;
+  color: #fff;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .callout {
+    transition: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 16px;
+  }
+
+  .nav__links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav__account {
+    flex-wrap: wrap;
+  }
+
+  .shop-page,
+  .product-page,
+  .cart-page {
+    padding-top: 120px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Cart rows: collapse the fixed 5-column grid into a stacked card */
+  .cart-row {
+    grid-template-columns: 56px 1fr;
+    grid-template-areas:
+      "image info"
+      "qty qty"
+      "remove total";
+    row-gap: 8px;
+  }
+
+  .cart-row__image {
+    grid-area: image;
+    width: 56px;
+    height: 56px;
+  }
+
+  .cart-row__info {
+    grid-area: info;
+  }
+
+  .cart-row__qty {
+    grid-area: qty;
+  }
+
+  .cart-row__remove {
+    grid-area: remove;
+    justify-self: start;
+  }
+
+  .cart-row__line-total {
+    grid-area: total;
+    justify-self: end;
+  }
+
+  /* Order rows: same fixed-grid problem, same fix */
+  .order-row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "id date"
+      "status total";
+    row-gap: 6px;
+  }
+
+  .order-row__id { grid-area: id; }
+  .order-row__date { grid-area: date; }
+  .order-status { grid-area: status; }
+  .order-row__total { grid-area: total; justify-self: end; }
+
+  /* Admin tables: horizontal scroll rather than trying to squeeze columns */
+  .admin-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .admin-content {
+    padding: 32px 16px 60px;
+  }
+
+  .admin-nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .admin-nav__links {
+    flex-wrap: wrap;
+  }
+
+  .admin-stats {
+    flex-wrap: wrap;
+  }
+
+  .product-page {
+    padding-top: 120px;
+  }
+
+  .product-page__add-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Auth pages ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--linen);
+  padding: 40px;
+  border: 1px solid rgba(44, 32, 24, 0.1);
+}
+
+.auth-form h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--warm-grey);
+}
+
+.auth-form input,
+.auth-form textarea {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  padding: 10px 12px;
+  border: 1px solid rgba(44, 32, 24, 0.2);
+  background: #fff;
+  color: var(--ink);
+}
+
+.auth-form input:focus,
+.auth-form textarea:focus {
+  outline: none;
+  border-color: var(--rust);
+}
+
+.auth-form__success {
+  font-size: 13px;
+  color: #2e6b3e;
+  background: rgba(60, 120, 70, 0.08);
+  padding: 8px 12px;
+  border-left: 2px solid #2e6b3e;
+}
+
+.auth-form .cta {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.auth-form__error {
+  font-size: 13px;
+  color: var(--rust);
+  background: rgba(181, 80, 31, 0.08);
+  padding: 8px 12px;
+  border-left: 2px solid var(--rust);
+}
+
+.auth-form__switch {
+  font-size: 13px;
+  color: var(--warm-grey);
+  margin-top: 4px;
+}
+
+.auth-form__switch a {
+  color: var(--rust);
+  text-decoration: none;
+}
+
+/* ---------- Shop ---------- */
+.shop-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 32px 80px;
+}
+
+.shop-page h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 24px;
+}
+
+.shop-filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.shop-filters a {
+  color: var(--warm-grey);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.shop-filters a.active {
+  color: var(--ink);
+  border-bottom-color: var(--rust);
+}
+
+.shop-empty {
+  color: var(--warm-grey);
+}
+
+.shop-empty a {
+  color: var(--rust);
+}
+
+/* ---------- Category tile grid ---------- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 16px;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.category-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.category-tile__image {
+  aspect-ratio: 3/4;
+  background: var(--linen);
+  overflow: hidden;
+  position: relative;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.category-tile:hover .category-tile__image {
+  transform: translateY(-3px);
+}
+
+.category-tile--active .category-tile__image {
+  border-color: var(--rust);
+}
+
+.category-tile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-tile__image--all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--espresso);
+}
+
+.category-tile__image--all span {
+  font-family: "Sekuya", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--linen);
+  letter-spacing: 0.05em;
+}
+
+.category-tile__label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---------- Curated sections (new arrivals / sale / top sellers) ---------- */
+.shop-section {
+  margin-bottom: 56px;
+}
+
+.shop-section .panel__eyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--rust);
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+}
+
+.product-card__price-was {
+  text-decoration: line-through;
+  color: var(--warm-grey);
+  font-size: 12px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 28px;
+  gap: 28px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.product-card__image {
+  aspect-ratio: 1;
+  background: var(--linen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__name {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.product-card__price {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--rust);
+}
+
+.product-card__oos {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--warm-grey);
+  text-transform: uppercase;
+}
+
+/* ---------- Product detail ---------- */
+.product-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 32px 80px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-gap: 48px;
+  gap: 48px;
+}
+
+.product-page__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-page__gallery img {
+  width: 100%;
+  background: var(--linen);
+}
+
+.product-page__placeholder {
+  aspect-ratio: 4/3;
+  background: var(--linen);
+}
+
+.product-page__info h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 8px;
+}
+
+.product-page__price {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  color: var(--rust);
+  margin: 0 0 16px;
+}
+
+.product-page__description {
+  color: var(--espresso);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.product-page__add-form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.product-page__add-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
+
+.product-page__add-form input {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid rgba(44, 32, 24, 0.2);
+}
+
+.product-page__stock {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--warm-grey);
+}
+
+@media (max-width: 800px) {
+  .product-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Cart ---------- */
+.cart-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 32px 80px;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto auto auto;
+  align-items: center;
+  grid-gap: 16px;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(44, 32, 24, 0.1);
+}
+
+.cart-row__image {
+  width: 64px;
+  height: 64px;
+  background: var(--linen);
+  overflow: hidden;
+}
+
+.cart-row__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-row__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-row__name {
+  font-weight: 500;
+}
+
+.cart-row__price {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--warm-grey);
+}
+
+.cart-row__qty {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.cart-row__qty input {
+  width: 48px;
+  padding: 6px;
+  border: 1px solid rgba(44, 32, 24, 0.2);
+}
+
+.cart-row__remove {
+  background: none;
+  border: none;
+  color: var(--rust);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.cart-row__line-total {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 0;
+  border-top: 2px solid var(--ink);
+  margin-bottom: 24px;
+}
+
+/* ---------- Orders ---------- */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto auto;
+  align-items: center;
+  grid-gap: 16px;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(44, 32, 24, 0.1);
+  text-decoration: none;
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+}
+
+.order-status {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  letter-spacing: 0.05em;
+}
+
+.order-status--pending { background: rgba(140, 130, 114, 0.15); color: var(--warm-grey); }
+.order-status--processing { background: rgba(181, 80, 31, 0.12); color: var(--rust); }
+.order-status--shipped { background: rgba(44, 32, 24, 0.1); color: var(--espresso); }
+.order-status--delivered { background: rgba(60, 120, 70, 0.12); color: #2e6b3e; }
+.order-status--cancelled { background: rgba(180, 40, 40, 0.1); color: #a53030; }
+
+/* ---------- Admin ---------- */
+.admin-layout {
+  min-height: 100vh;
+  background: var(--champagne);
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  background: var(--espresso);
+  color: var(--linen);
+}
+
+.admin-nav .nav__mark {
+  color: var(--linen);
+}
+
+.admin-nav__links {
+  display: flex;
+  gap: 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
+
+.admin-nav__links a {
+  color: var(--linen);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.admin-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+}
+
+.admin-content h1 {
+  font-size: 32px;
+  margin: 4px 0 24px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.admin-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.admin-stat {
+  background: var(--linen);
+  padding: 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-stat__value {
+  font-family: "Sekuya", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.admin-stat__label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--warm-grey);
+  text-transform: uppercase;
+}
+
+.admin-alert {
+  background: rgba(181, 80, 31, 0.08);
+  border-left: 2px solid var(--rust);
+  padding: 16px 20px;
+}
+
+.admin-alert ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th {
+  text-align: left;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(44, 32, 24, 0.2);
+}
+
+.admin-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(44, 32, 24, 0.08);
+}
+
+.admin-table__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.admin-table__actions a {
+  color: var(--rust);
+  font-size: 13px;
+}
+
+.admin-table__delete {
+  background: none;
+  border: none;
+  color: #a53030;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 480px;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--warm-grey);
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  padding: 10px 12px;
+  border: 1px solid rgba(44, 32, 24, 0.2);
+  background: #fff;
+  color: var(--ink);
+}
+
+.admin-form__checkbox {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.admin-inline-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.admin-inline-form input,
+.admin-inline-form select {
+  padding: 8px 10px;
+  border: 1px solid rgba(44, 32, 24, 0.2);
+}
